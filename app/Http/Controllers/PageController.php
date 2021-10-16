@@ -10,4 +10,9 @@ class PageController extends Controller
     {
         return view('about');
     }
+
+    public function home()
+    {
+        return view('welcome');
+    }
 }

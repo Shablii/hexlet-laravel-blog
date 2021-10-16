@@ -13,7 +13,7 @@
     <body>
         <header class="flex-shrink-0">
                 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                    <a class="navbar-brand" href="/">Гланая</a>
+                    <a class="navbar-brand" href="{{ route('home') }}">Гланая</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -25,12 +25,10 @@
                                 " href="{{route('about')}}">О блоге</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link
-                                {{ request()->routeIs('articles.index') ? 'active' : '' }}
-                                "href="{{route('articles.index')}}">Список статей</a>
+                                <a class="nav-link{{ request()->routeIs('articles.index') ? 'active' : ''}}" href="{{route('articles.index')}}">Список статей</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link{{ request()->routeIs('articles.create') ? 'active' : ''}}"href="{{route('articles.create')}}">Добавить статью</a>
+                                <a class="nav-link{{ request()->routeIs('articles.create') ? 'active' : ''}}" href="{{route('articles.create')}}">Добавить статью</a>
                             </li>
                         </ul>
                     </div>

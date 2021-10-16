@@ -24,7 +24,7 @@ class EditArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:articles,name,'. $this->id,
+            'name' => 'required|unique:articles,name,'. $this->article,
             'body' => 'required|min:100'
         ];
     }
